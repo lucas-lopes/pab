@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS testament;
+CREATE TABLE IF NOT EXISTS testament(
+	id INT NOT NULL,
+	name VARCHAR(45) NULL,
+	PRIMARY KEY (id));
+
+DROP TABLE IF EXISTS books;
+CREATE TABLE IF NOT EXISTS books(
+	id INT NOT NULL,
+	name VARCHAR(45) NOT NULL,
+	abbrev VARCHAR(5) NOT NULL,
+	testament INT NOT NULL,
+	chapters INT NULL,
+	verses INT NULL,
+	PRIMARY KEY (id));
+
+DROP TABLE IF EXISTS verses;
+CREATE TABLE IF NOT EXISTS verses(
+	id SERIAL NOT NULL,
+	version VARCHAR(10) NOT NULL,
+	testament INT NOT NULL,
+	book INT NOT NULL,
+	chapter INT NOT NULL,
+	verse INT NOT NULL,
+	text VARCHAR NOT NULL,
+	PRIMARY KEY (id));
