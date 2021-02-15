@@ -8,16 +8,23 @@
 * Docker Compose
 * Maven
 
-## Run
+## Build
 
 ```
 $ git clone https://github.com/lucas-lopes/pab
 $ cd pab
+$ docker-compose up -d db
 $ mvn clean install
-$ docker-compose up -d
+$ docker-compose down
 ```
 
 ## How to test
+
+First, you will need run the docker-compose:
+
+```
+$ docker-compose up -d
+```
 
 ### **Database**
 
